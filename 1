@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int i;
+	int a[4];
+	int d1;
+	int d2;
+	for(i=0;i<4;i++)
+	{
+		scanf("%d",a+i);
+		printf("%d ",a[i]);
+	}
+	d1=a[1]-a[0];
+	d2=a[2]-a[1];
+	if(d1==d2)
+	    printf("%d\n",a[3]+d1);
+	else
+	    printf("%d\n",a[3]*(a[1]/a[0]));
+    return 0;
+}

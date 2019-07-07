@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int a[100],b[100];
+	int num,i;
+	printf("输入题目的数量:");
+	scanf("%d",&num);
+	for(i=0;i<num;i++)
+	{
+		scanf("%d%d",&a[i],&b[i]);
+	}
+	for(i=0;i<num;i++)
+	{
+		printf("第%d道\n",i+1);
+		printf("%d+%d=%d\n",a[i],b[i],a[i]+b[i]);
+	}
+	return 0;
+}

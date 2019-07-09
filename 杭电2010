@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int m,n;
+	int a,b,c,t;
+	while(scanf("%d %d",&m,&n)!=EOF)
+	{
+		for(t=0;m<=n;++m)
+		{
+			a=m/100;
+			b=(m-a*100)/10;
+			c=(m-a*100-b*10);
+			if(m==a*a*a+b*b*b+c*c*c)
+		    {
+		    	if(t!=0)
+		    	{
+		    		printf(" ");
+		    	}
+		       printf("%d",m);
+		       t++;
+		    }
+		}
+		if(t==0)
+		printf("ÎÞË®ÏÉ»¨Êý");
+	}
+	return 0;
+}

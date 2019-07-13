@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	char t;
+	char p[3];
+	int i,j;	
+	for(i=0;i<3;i++)
+	scanf("%c",&p[i]);
+	for(j=0;j<2;j++)
+	{
+		for(i=0;i<2-j;i++)
+		if(p[i]>p[i+1])
+		{
+			t=p[i];
+			p[i]=p[i+1];
+			p[i+1]=t;
+		}
+	}
+    for(i=0;i<3;i++)
+	printf("%c",p[i]);
+	return 0;
+}

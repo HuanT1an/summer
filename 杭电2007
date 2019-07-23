@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int p,l,m,n,i,t;
+	while(scanf("%d %d",&m,&n)!=EOF)
+	{
+		p=l=0;
+		if(m>n)
+		{
+			t=m;
+			m=n;
+			n=t;
+		}
+		for(i=m;i<=n;i++)
+		{
+			if(i%2==0)
+			p+=i*i;
+			else
+			l+=i*i*i;
+		}
+		printf("偶数的平方和为%d 奇数的立方和为%d\n",p,l);
+	}
+	return 0;
+}

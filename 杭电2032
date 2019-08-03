@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+     int t[30][30];
+     int n,i,j;
+     while(scanf("%d",&n)!=EOF)
+	 {
+        printf("1\n");
+        for(i=0; i<n; i++) 
+		 {
+            t[i][0]=1;
+            if(i!=0)
+            t[i][i]=1;
+     }
+        for(i=1; i<n; i++) 
+		{
+            printf("1 ");
+            for(j=1; j<i; j++) 
+		   	{
+                t[i][j]=t[i-1][j-1]+t[i-1][j];
+                printf("%d ",t[i][j]);
+        }
+            printf("1\n");
+    }
+        printf("\n");
+     }
+	return 0;
+}
